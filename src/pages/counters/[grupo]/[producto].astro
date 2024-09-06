@@ -1,15 +1,19 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { marcas } from '../../../lib/mangos';
+import Galeria from '../../../components/Galeria.astro';
+
+
 
 export function getStaticPaths() {
   const paths = [];
 
   marcas.forEach((marca) => {
     marca.productos.forEach((producto) => {
+      console.log(producto.marca)
         paths.push({
           params: {
-            marca: marca.grupo,
+            grupo: producto.marca,
             producto: producto.slug,
           },
         });
@@ -19,18 +23,61 @@ export function getStaticPaths() {
   return paths; // Devolvemos un array de rutas
 }
 
-const { marca, producto, index } = Astro.params;
 
-// const miMarca = marcas.find((m) => m.marca === marca);
-// const miProducto = miMarca.productos.find((p) => p.producto === producto);
-// const miSabor = miProducto.sabores.find((s) => s.sabor === sabor);
-// const imagenSeleccionada = miSabor?.imagenes[parseInt(index)];
+
+const { grupo, producto, index } = Astro.params;
+
+
+const miMarca = marcas.find((m) => m.slug == grupo);
+const miProducto = miMarca.productos.find((p) => p.slug === producto);
 ---
 
-<Layout title='Mango'>
-    <h1 class="text-white text-2xl">
-        {
-            producto
-        }
-    </h1>
+<Layout title="Mango">
+  <main class="sm:w-4/5 bg-pink-600 m-auto flex">
+    <section class="w-1/2 flex flex-col justify-center items-center bg-lime-400">
+      <Galeria img1="h2oh" img2="h2-pitaya" img3="h2-sandia" />
+    </section>
+    <section class="w-1/2">
+      <article>
+        {miProducto ? (
+          <>
+            <div>
+              <h1>{miProducto.titulo}</h1>
+              <p>{miProducto.detalles}</p>
+            </div>
+            <ul>
+              <li>
+                <span>Calories:</span> {miProducto.calorias}
+              </li>
+              <li>
+                <span>Sweetener System:</span> {miProducto.sweetnerSystem}
+              </li>
+
+              {miProducto.info && miProducto.info.length > 0 && (
+                <>
+                  <li>
+                    <span>Additional Info:</span>
+                  </li>
+                  {miProducto.info.map((info, index) => (
+                    <li key?={index} >{info}</li>
+                  ))}
+                </>
+              )}
+            </ul>
+            <div class="flex justify-start">
+              {miProducto.paises && miProducto.paises.length > 0 && (
+                <>
+                  {miProducto.paises.map((pais, index) => (
+                      <img src={`${pais}.png`} alt={`Bandera de ${pais}`} />
+                  ))}
+                </>
+              )}
+            </div>
+          </>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </article>
+    </section>
+  </main>
 </Layout>
