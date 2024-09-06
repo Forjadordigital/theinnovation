@@ -1,4 +1,6 @@
 ---
+// Supports weights 300-800
+import '@fontsource-variable/open-sans';
 interface Props {
 	title: string;
 }
@@ -22,26 +24,47 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		
 	}
+
+	@font-face {
+		font-family: 'pepsiCompress';
+		src: url('/fonts/pepsiCompress.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'pepsiExtended';
+		src: url('/fonts/pepsiExtended.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: 'Open Sans Variable', sans-serif, system-ui, sans-serif;
+		background-image: linear-gradient(to top, #231f20, #1f1b1c, #1a1818, #161414, #110f0f);
 	}
 
 	body{
+		background-image: linear-gradient(to top, #231f20, #1f1b1c, #1a1818, #161414, #110f0f);
+		background-size: cover;
+		background-position: center;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
+
+	.font-pepsi-compress{
+		font-family: 'pepsiCompress', 'Open Sans Variable', sans-serif, system-ui, sans-serif;
+	}
+
+	.font-pepsi-extended{
+		font-family: 'pepsiExtended', 'Open Sans Variable', sans-serif, system-ui, sans-serif;
+	}
+
 	
 </style>
