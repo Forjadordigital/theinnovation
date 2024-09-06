@@ -1,0 +1,36 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { marcas } from '../../../lib/mangos';
+
+export function getStaticPaths() {
+  const paths = [];
+
+  marcas.forEach((marca) => {
+    marca.productos.forEach((producto) => {
+        paths.push({
+          params: {
+            marca: marca.grupo,
+            producto: producto.slug,
+          },
+        });
+    });
+  });
+
+  return paths; // Devolvemos un array de rutas
+}
+
+const { marca, producto, index } = Astro.params;
+
+// const miMarca = marcas.find((m) => m.marca === marca);
+// const miProducto = miMarca.productos.find((p) => p.producto === producto);
+// const miSabor = miProducto.sabores.find((s) => s.sabor === sabor);
+// const imagenSeleccionada = miSabor?.imagenes[parseInt(index)];
+---
+
+<Layout title='Mango'>
+    <h1 class="text-white text-2xl">
+        {
+            producto
+        }
+    </h1>
+</Layout>

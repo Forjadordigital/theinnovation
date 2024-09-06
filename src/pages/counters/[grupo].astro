@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { marcas } from '../../lib/mangos';
+
+
+export function getStaticPaths() {
+  // Generar las rutas basadas en las marcas
+  return marcas.map((marca) => ({
+    params: {
+      grupo: marca.slug
+    },
+  }));
+}
+
+const { grupo } = Astro.params;
+
+---
+
+<Layout title='Mango'>
+    <h1 class="text-white">
+        {
+            grupo
+        }
+    </h1>
+</Layout>
