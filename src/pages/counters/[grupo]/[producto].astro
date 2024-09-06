@@ -58,7 +58,7 @@ if (!miProducto) {
               <h1 class="font-pepsi-compress text-white text-6xl my-4">{miProducto.titulo}</h1>
               <p>{miProducto.detalles}</p>
             </div>
-            <ul class="my-2">
+            <ul class="mb-2 mt-6">
               <li><span class="font-bold">Calories:</span> {miProducto.calorias || 'No disponible'}</li>
               <li><span class="font-bold">Sweetener System:</span> {miProducto.sweetnerSystem || 'No disponible'}</li>
 
@@ -71,13 +71,13 @@ if (!miProducto) {
                 </>
               )}
             </ul>
-            <div class="flex justify-start my-4">
+            <div class="flex justify-start gap-4 my-6">
               {miProducto.paises && miProducto.paises.length > 0 ? (
                 <>
                   {miProducto.paises.map((pais, index) => {
                     console.log('País:', pais);  // Se ha movido el console.log fuera del JSX
                     return (
-                      <img key={index} src={`${pais}.png`} alt={`Bandera de ${pais}`} />
+                      <img key={index} class="h-12" src={`/images/${pais}.webp`} alt={`Bandera de ${pais}`} />
                     );
                   })}
                 </>
