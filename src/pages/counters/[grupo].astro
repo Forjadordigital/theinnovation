@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { marcas } from '../../lib/mangos';
+import CardProduct from '../../components/CardProduct.astro';
 
 export function getStaticPaths() {
   // Generar las rutas basadas en las marcas
@@ -13,12 +14,26 @@ export function getStaticPaths() {
 
 const { grupo } = Astro.params;
 
+const miMarca = marcas.find((m) => m.slug == grupo);
+
 ---
 
 <Layout title='Mango'>
-    <h1 class="text-white">
+    <main class="w-full  flex justify-center">
+       <div class="sm:w-1/2 w-11/12 m-auto grid grid-cols-2 gap-4 mt-24">
+        <h1 class="col-span-2 text-white font-pepsi-compress text-5xl text-center mb-4 ">
+          {
+            miMarca.titulo
+          }
+        </h1>
+        <img src="/images/h2-sandia.png" alt="" class="row-span-2 justify-self-center self-center hidden sm:block">
         {
-            grupo
+          <>
+           {miMarca.productos.map((producto, index) => (
+              <CardProduct img={producto.fotos[0]} titulo={producto.titulo} />
+           ))}
+          </>
         }
-    </h1>
+       </div>
+    </main>
 </Layout>

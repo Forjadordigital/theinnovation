@@ -10,13 +10,14 @@ export interface Producto {
     sweetnerSystem: string;
     info: string[];
     paises: string[];
-    imagenes: string[];
+    fotos: any[];
     sabores: string[];
 }
 
 export interface Marca {
     id: string;
     grupo: string;
+    titulo: string;
     slug: string;
     productos: Producto[];
 }
@@ -26,6 +27,7 @@ export const marcas: Marca[] = [
   {
       "id": "1",
       "grupo": "Gatorade",
+      "titulo":"Gatorade",
       "slug": "gatorade",
       "productos": [
           {
@@ -44,7 +46,7 @@ export const marcas: Marca[] = [
               "Caffeine 32 mg/ 100 mL"
             ],
             "paises": ["brasil", "jamaica"],
-            "imagenes": ["energy-orange", "energy-watermelon"],
+            "fotos": ["energy-orange", "energy-watermelon", ""],
             "sabores": ["Orange", "Watermelon"]
           },
           {
@@ -63,7 +65,7 @@ export const marcas: Marca[] = [
               "Chloride 1040 mg per 591 mL"
             ],
             "paises": ["mexico"],
-            "imagenes": ["gatorlit-cherry", "gatorlit-watermelon"],
+            "fotos": ["gatorlit-cherry", "gatorlit-watermelon", ""],
             "sabores": ["Cherry lime", "Watermelon"]
           }
         ]
@@ -71,6 +73,7 @@ export const marcas: Marca[] = [
   {
       "id": "2",
       "grupo": "Pepsi",
+      "titulo":"Pepsi",
       "slug": "pepsi",
       "productos": [
           {
@@ -83,7 +86,7 @@ export const marcas: Marca[] = [
             "sweetnerSystem": "Aspartame & Acesulfame-K",
             "info": [],
             "paises": ["brasil"],
-            "imagenes": ["pepsi-black"],
+            "fotos": ["pepsi-black", "", ""],
             "sabores": ["Lime"]
           }
         ]
@@ -91,6 +94,7 @@ export const marcas: Marca[] = [
   {
       "id": "3",
       "grupo": "Rockstar",
+      "titulo":"Rockstar",
       "slug": "rockstar",
       "productos": [
           {
@@ -106,7 +110,7 @@ export const marcas: Marca[] = [
               "*Ingredients according to country's regulation."
             ],
             "paises": ["argentina", "chile"],
-            "imagenes": ["rs-mango", "rs-watermelon", "rs-passion"],
+            "fotos": ["rs-mango", "rs-watermelon", "rs-passion"],
             "sabores": ["Rockstar Mango", "Rockstar Watermelon Kiwi", "Rockstar Passionfruit"]
           },
           {
@@ -122,7 +126,7 @@ export const marcas: Marca[] = [
               "*Ingredients according to country's regulation."
             ],
             "paises": [],
-            "imagenes": ["rs-peach", "rs-strawberry"],
+            "fotos": ["rs-peach", "rs-strawberry", ""],
             "sabores": ["Rockstar White Peach", "Rockstar Strawberry-lime"]
           }
         ]
@@ -130,6 +134,7 @@ export const marcas: Marca[] = [
   {
       "id": "4",
       "grupo": "Mix",
+      "titulo":"7UP, H2OH! & Mirinda",
       "slug": "mix",
       "productos": [
           {
@@ -142,7 +147,7 @@ export const marcas: Marca[] = [
             "sweetnerSystem": "ASK/Sucralose 5% Alcohol",
             "info": [],
             "paises": ["costarica"],
-            "imagenes": ["7up-hard"],
+            "fotos": ["7up-hard", "", ""],
             "sabores": ["7UP Hard"]
           },
           {
@@ -155,7 +160,7 @@ export const marcas: Marca[] = [
             "sweetnerSystem": "Aspartame & Acesulfame-K",
             "info": [],
             "paises": ["costarica"],
-            "imagenes": ["7up-citrus"],
+            "fotos": ["7up-citrus", "", ""],
             "sabores": ["7UP Citrus"]
           },
           {
@@ -172,7 +177,7 @@ export const marcas: Marca[] = [
               "Pitaya Limon: Vitamin B and 2.5% lemon juice."
             ],
             "paises": ["brasil", "colombia"],
-            "imagenes": ["h2oh", "h2-pitaya", "h2-sandia"],
+            "fotos": ["h2oh", "h2-pitaya", "h2-sandia"],
             "sabores": ["H2OH", "Pitaya Limón", "Sandia Limón"]
           },
           {
@@ -185,8 +190,8 @@ export const marcas: Marca[] = [
             "sweetnerSystem": "Aspartame & Acesulfame-K",
             "info": [],
             "paises": ["costarica"],
-            "imagenes": ["mirinda"],
-            "sabores": ["Mirinda Lemon-Lime"]
+            "fotos": ["mirinda-blue", "mirinda-pome", ""],
+            "sabores": ["Mirinda Blueberry", "Mirinda Pomegranate grape"]
           }
         ]
   },

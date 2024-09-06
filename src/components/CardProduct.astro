@@ -1,0 +1,15 @@
+---
+
+const {img, titulo} = Astro.props
+
+---
+<div class="w-ful bg-gray-600">
+    <img src=`/images/${img}.webp` alt=`Imagen de un producto de ${titulo}` class="w-full" />
+    <h3 class="text-white text-center p-2">
+      {titulo}
+    </h3>
+</div>
+
+<style>
+
+</style>

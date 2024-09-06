@@ -1,27 +1,43 @@
 ---
-const { img1, img2, img3} = Astro.props
+const { img1, img2, img3, nombre1, nombre2, nombre3} = Astro.props
+
+const datos = [];
+
+if (img1 !== '') {
+  datos.push({ imagen: img1, nombre: nombre1 || '' });
+}
+
+if (img2 !== '') {
+  datos.push({ imagen: img2, nombre: nombre2 || '' });
+}
+
+if (img3 !== '') {
+  datos.push({ imagen: img3, nombre: nombre3 || '' });
+}
+
 ---
 
-    <div class="w-1/2 bg-yellow-200">
+    <div class="w-4/5 sm:w-1/2">
         <div class="container">
             <!-- Close the image -->
           
             <!-- Expanded image -->
-            <img  src=`/images/${img1}.png` id="expandedImg" style="width:100%">
+            <img  src=`/images/${img1}.webp` id="expandedImg" style="width:100%">
           
             
           </div>
         
           <div class="row flex justify-center">
-            <div class="column">
-              <img src=`/images/${img1}.png` alt="Nature" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-              <img src=`/images/${img2}.png`onclick="myFunction(this);">
-            </div>
-            <div class="column">
-              <img src=`/images/${img3}.png` alt="Mountains" onclick="myFunction(this);">
-            </div>
+
+            {
+                datos.map((dato) => (
+                <div class="column text-center">
+                    <img src=`/images/${dato.imagen}.webp` alt={dato.imagen} onclick="myFunction(this);">
+                    <span class="text-sm">{dato.nombre}</span>
+                </div>
+                ))
+            }
+
           </div>
     </div>
   
@@ -30,7 +46,7 @@ const { img1, img2, img3} = Astro.props
         /* The grid: Four equal columns that floats next to each other */
     .column {
     float: left;
-    width: 30%;
+    width: 33%;
     padding: 10px;
     }
 
