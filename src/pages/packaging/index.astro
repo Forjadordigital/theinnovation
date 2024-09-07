@@ -12,10 +12,10 @@ import Layout from '../../layouts/Layout.astro';
     </section>
 
     <!-- Expanding Gatoradr -->
-    <section>
-      <div>
+    <section class="w-4/5">
+      <div class="flex items-center justify-between">
         <img src="/images/" alt="Logo Gatorade Neon">
-        <h2 class="text-transparent p-4 text-3xl bg-clip-text bg-gradient-to-r font-neon-uno er-fondo neon-verde">
+        <h2 class="text-transparent p-4 text-2xl bg-clip-text bg-gradient-to-r font-neon-uno er-fondo-naranja neon-naranja">
           Expanding Gatorlit Beyond México
         </h2>
       </div>
@@ -79,6 +79,11 @@ import Layout from '../../layouts/Layout.astro';
   animation: pulso 2s infinite alternate;
 }
 
+.neon-naranja {
+  text-shadow: 0px 0px 30px #ff9100cf; 
+  animation: pulso-naranja 2s infinite alternate;
+}
+
 .er-fondo{
     background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2FheDA3ZWxwMHVod25vbzBjOXE4cDVrcXd3NGV3cTNxYjFlcGowMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3otO6NFBIAFg2vPZuM/giphy.webp');
     background-position: center;
@@ -86,6 +91,21 @@ import Layout from '../../layouts/Layout.astro';
     background-size: cover;
 }
 
+.er-fondo-naranja{
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExempvdnFvNHkxNzhwNXJwOTVyaDBmMmQ5d25sZGs3NjllNWh2NjdkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/APel4rVH09pmxIZcZN/giphy.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes pulso-naranja {
+  from {
+    text-shadow: 0px 0px 10px #ff9100;
+  }
+  to {
+    text-shadow: 0px 0px 30px #ff9100;
+  }
+}
 @keyframes pulso {
   from {
     text-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8);
