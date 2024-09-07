@@ -48,6 +48,23 @@ const { title } = Astro.props;
 		font-display: swap;
 	}
 
+	@font-face {
+		font-family: 'nightInline';
+		src: url('/fonts/NightLightInline.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'nightSquare';
+		src: url('/fonts/NightLightSquare.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+
 	html {
 		font-family: 'Open Sans Variable', sans-serif, system-ui, sans-serif;
 		background-image: linear-gradient(to top, #231f20, #1f1b1c, #1a1818, #161414, #110f0f);
@@ -66,6 +83,14 @@ const { title } = Astro.props;
 
 	.font-pepsi-extended{
 		font-family: 'pepsiExtended', 'Open Sans Variable', sans-serif, system-ui, sans-serif;
+	}
+
+	.font-neon-uno{
+		font-family: 'nightInline', 'Open Sans Variable', sans-serif, system-ui, sans-serif;
+	}
+
+	.font-neon-dos{
+		font-family: 'nightSquare', 'Open Sans Variable', sans-serif, system-ui, sans-serif;
 	}
 
 	
