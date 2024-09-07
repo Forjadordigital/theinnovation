@@ -56,7 +56,7 @@ export const marcas: Marca[] = [
             "label": "Gatorade",
             "detalles": "From the creators of Gatorade, the world's #1 sports drink, comes ENERGY by Gatorade. The first energy drink in the world designed and developed for athletes. Energy by Gatorade gives you that boost of energy you need to start performing at your maximum from minute zero, thanks to it’s formula developed specifically for sports practitioners. Without sugar or carbonation, and the right level of caffeine, vitamins and electrolytes.",
             "calorias": "0 kcal",
-            "sweetnerSystem": "Sucralose & Acesulfame-K",
+            "sweetnerSystem": "Sucralose",
             "info": [
               "Sodium 46 mg per 100 mL",
               "Potassium 14 mg per 100 mL",
@@ -64,7 +64,7 @@ export const marcas: Marca[] = [
               "B5 and B6",
               "Caffeine 32 mg/ 100 mL"
             ],
-            "paises": ["brasil"],
+            "paises": ["jamaica"],
             "fotos": ["energy-orange", "energy-watermelon", ""],
             "sabores": ["Orange", "Fierce Grape"]
           }
@@ -159,7 +159,7 @@ export const marcas: Marca[] = [
             "calorias": "0 kcal (12oz)",
             "sweetnerSystem": "Aspartame & Acesulfame-K",
             "info": [],
-            "paises": ["costarica"],
+            "paises": ["mexico"],
             "fotos": ["7up-citrus", "", ""],
             "sabores": ["7UP Citrus"]
           },
