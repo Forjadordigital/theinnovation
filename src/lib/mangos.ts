@@ -31,25 +31,6 @@ export const marcas: Marca[] = [
       "slug": "gatorade",
       "productos": [
           {
-            "slug": "energy-by-g",
-            "marca": "Gatorade",
-            "titulo": "Energy by G",
-            "label": "Gatorade",
-            "detalles": "From the creators of Gatorade, the world's #1 sports drink, comes ENERGY by Gatorade. The first energy drink in the world designed and developed for athletes. Energy by Gatorade gives you that boost of energy you need to start performing at your maximum from minute zero, thanks to it’s formula developed specifically for sports practitioners. Without sugar or carbonation, and the right level of caffeine, vitamins and electrolytes.",
-            "calorias": "0 kcal",
-            "sweetnerSystem": "Sucralose & Acesulfame-K",
-            "info": [
-              "Sodium 46 mg per 100 mL",
-              "Potassium 14 mg per 100 mL",
-              "Vitamin B3",
-              "B5 and B6",
-              "Caffeine 32 mg/ 100 mL"
-            ],
-            "paises": ["brasil"],
-            "fotos": ["energy-orange", "energy-watermelon", ""],
-            "sabores": ["Orange", "Watermelon"]
-          },
-          {
             "slug": "gatorlit",
             "marca": "Gatorade",
             "titulo": "Gatorlit",
@@ -67,6 +48,25 @@ export const marcas: Marca[] = [
             "paises": ["mexico"],
             "fotos": ["gatorlit-cherry", "gatorlit-watermelon", ""],
             "sabores": ["Cherry lime", "Watermelon"]
+          },
+          {
+            "slug": "energy-by-g",
+            "marca": "Gatorade",
+            "titulo": "Energy by G",
+            "label": "Gatorade",
+            "detalles": "From the creators of Gatorade, the world's #1 sports drink, comes ENERGY by Gatorade. The first energy drink in the world designed and developed for athletes. Energy by Gatorade gives you that boost of energy you need to start performing at your maximum from minute zero, thanks to it’s formula developed specifically for sports practitioners. Without sugar or carbonation, and the right level of caffeine, vitamins and electrolytes.",
+            "calorias": "0 kcal",
+            "sweetnerSystem": "Sucralose & Acesulfame-K",
+            "info": [
+              "Sodium 46 mg per 100 mL",
+              "Potassium 14 mg per 100 mL",
+              "Vitamin B3",
+              "B5 and B6",
+              "Caffeine 32 mg/ 100 mL"
+            ],
+            "paises": ["brasil"],
+            "fotos": ["energy-orange", "energy-watermelon", ""],
+            "sabores": ["Orange", "Watermelon"]
           }
         ]
   },
