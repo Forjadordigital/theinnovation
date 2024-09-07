@@ -178,7 +178,7 @@ export const marcas: Marca[] = [
             ],
             "paises": ["brasil", "colombia"],
             "fotos": ["h2oh", "h2-pitaya", "h2-sandia"],
-            "sabores": ["H2OH", "Pitaya Limón", "Sandia Limón"]
+            "sabores": ["Limonada de Coco", "Pitaya Limón", "Sandia Limón"]
           },
           {
             "slug": "mirinda-flavors",

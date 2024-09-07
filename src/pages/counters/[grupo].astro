@@ -28,7 +28,7 @@ if (!miMarca) {
 
      <!-- Imagen de la marca -->
      {miMarca ? (
-      <img src={`/images/${miMarca.slug}.png`} alt={`Logo de ${miMarca.titulo}`} class="mb-8 w-2/3 mt-10 " />
+      <img src={`/images/${miMarca.slug}.png`} alt={`Logo de ${miMarca.titulo}`} class="mb-8 w-2/3 mt-10 " transition:name="hero" />
     ) : (
       <p>No se encontró la marca</p>
     )}

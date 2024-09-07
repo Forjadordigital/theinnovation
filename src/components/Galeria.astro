@@ -15,6 +15,8 @@ if (img3 !== '') {
   datos.push({ imagen: img3, nombre: nombre3 || '' });
 }
 
+let idCaja = 'id'+nombre1
+
 ---
 
     <div class="w-4/5 sm:w-1/2">
@@ -22,7 +24,7 @@ if (img3 !== '') {
             <!-- Close the image -->
           
             <!-- Expanded image -->
-            <img  src=`/images/${img1}.webp` id="expandedImg" style="width:100%">
+            <img  src=`/images/${img1}.webp` id={idCaja} style="width:100%">
           
             
           </div>
@@ -32,7 +34,7 @@ if (img3 !== '') {
             {
                 datos.map((dato) => (
                 <div class="column text-center">
-                    <img src=`/images/${dato.imagen}.webp` alt={dato.imagen} onclick="myFunction(this);">
+                    <img src=`/images/${dato.imagen}.webp` alt={idCaja} onclick="myFunction(this);">
                     <span class="text-sm">{dato.nombre}</span>
                 </div>
                 ))
@@ -56,7 +58,7 @@ if (img3 !== '') {
     cursor: pointer;
     }
 
-    .column img:hover,  .column img:focus {
+    .column img:hover,  .column img:hover {
     opacity: 1;
     border: 2px solid ;
 
@@ -97,7 +99,8 @@ if (img3 !== '') {
 
   <script is:inline>
    function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
+  let id = imgs.alt
+  var expandImg = document.getElementById(id);
   var imgText = document.getElementById("imgtext");
   expandImg.src = imgs.src;
   imgText.innerHTML = imgs.alt;
