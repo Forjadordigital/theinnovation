@@ -153,12 +153,50 @@ import GatoradeLogo from '../../icons/GatoradeLogo.astro'
     </section>
 
     <!-- Clear Bottle 7up -->
-    <section class="w-4/5 mb-20">
-      <div class="flex items-center justify-between">
+    <section class="w-4/5 text-white mb-20">
+      <div class="flex items-center justify-between mb-10">
         <img src="/images/packs/7up-neon-logo.svg" alt="Logo 7up Neon" class="h-20">
         <h2 class="text-transparent p-4 text-2xl bg-clip-text bg-gradient-to-r font-neon-uno er-fondo-verde neon-verde">
           Clear Bottle LatAm <br> Overview
         </h2>
+      </div>
+      <div class="w-full border py-4 mb-8">
+        <img src="/images/packs/mapa-america.svg" alt="Mapa de America" class="w-full">
+      </div>
+      <h3 class="text-[#00ff00cc] font-bold mb-4">
+        Regions already using clear bottle
+      </h3>
+      <div>
+        <h6 class="uppercase mb-4">North</h6>
+        <div class="w-full flex justify-evenly items-center border-b-2 pb-1 border-b-lime-400">
+          <img class="w-20" src="/images/banderas-redondas/peruflag.svg" alt="Bandera de Perú">
+          <img class="w-20" src="/images/banderas-redondas/jamaicaflag.svg" alt="Bandera de Jamaica">
+          <img class="w-20" src="/images/banderas-redondas/nicaraguaflag.svg" alt="Bandera de Nicaragua">
+          <img class="w-20" src="/images/banderas-redondas/hondurasflag.svg" alt="Bandera de Honduras">
+          <img class="w-20" src="/images/banderas-redondas/ecuadorflag.svg" alt="Bandera de Ecuador">
+          <img class="w-20" src="/images/banderas-redondas/elsalvadorflag.svg" alt="Bandera de El Salvador">
+        </div>
+        <h6 class="uppercase my-4">Central</h6>
+        <div class="w-full flex justify-evenly items-center border-b-2 pb-1 border-b-lime-400">
+          <img class="w-20" src="/images/banderas-redondas/colombiaflag.svg" alt="Bandera de Colombia">
+          <img class="w-20" src="/images/banderas-redondas/costaricaflag.svg" alt="Bandera de Costa Rica">
+          <img class="w-20" src="/images/banderas-redondas/venezuelaflag.svg" alt="Bandera de Venezuela">
+          <img class="w-20" src="/images/banderas-redondas/tytflag.svg" alt="Bandera de Trinidad y Tobago">
+          <img class="w-20" src="/images/banderas-redondas/guyanaflag.svg" alt="Bandera de Guyana">
+        </div>
+        <h6 class="uppercase my-4">South</h6>
+        <div class="w-full flex justify-start items-center border-b-2 pb-1 border-b-lime-400">
+          <img class="w-20" src="/images/banderas-redondas/argentinaflag.svg" alt="Bandera de Argentina">
+          <img class="w-20" src="/images/banderas-redondas/uruguayflag.svg" alt="Bandera de Uruguay">
+        </div>
+        <div class="mt-8 text-lg">
+          <h3 class="text-[#00ff00cc] font-bold mb-2">
+            2025 7Up Clear Expansion
+          </h3>
+          <span class="block">Guatemala</span>
+          <span class="block">México</span>
+          <span class="block">Chile</span>
+        </div>
       </div>
     </section>
 
@@ -319,7 +357,7 @@ import GatoradeLogo from '../../icons/GatoradeLogo.astro'
       <div class="flex justify-start items-center mb-3 gap-2">
         <img src="/images/packs/pepsi-botella-3.png" alt="clear bottle Uruguay" class="w-full">
       </div>
-      <div class="">
+      <div>
       <h1 class="text-start text-[#394cbb] font-pepsi-extended">
         CURRENT GRB PORTFOLIO
       </h1>
@@ -354,11 +392,11 @@ import GatoradeLogo from '../../icons/GatoradeLogo.astro'
     </section>
 
     <!-- lw Finish -->
-    <section class="w-4/5 text-white">
-      <div class="flex items-center justify-between mb-10">
-        <img src="/images/packs/pepsi-neon-logo.svg" alt="Logo Pepsi Neon" class="h-20">
-        <h2 class="text-transparent p-4 text-2xl bg-clip-text bg-gradient-to-r font-neon-uno er-fondo-azul neon-azul">
-          PRB 1.5L Guatemala
+    <section class="w-4/5 text-white mb-32">
+      <div class="flex items-center justify-between mb-2">
+        <!-- <img src="/images/packs/pepsi-neon-logo.svg" alt="Logo Pepsi Neon" class="h-20"> -->
+        <h2 class="text-transparent pb-4 text-2xl bg-clip-text bg-gradient-to-r font-neon-uno er-fondo-blanco neon-blanco">
+          LW Finish 1881 - México
         </h2>
       </div>
       <img src="/images/packs/cuadro2.svg" alt="cuadro">
@@ -375,7 +413,7 @@ import GatoradeLogo from '../../icons/GatoradeLogo.astro'
 <style>
 	
 .neon-verde {
-  text-shadow: 0px 0px 50px rgba(0, 255, 0, 0.8); 
+  text-shadow: 0px 0px 50px #00ff00cc; 
   animation: pulso 2s infinite alternate;
 }
 
@@ -386,6 +424,11 @@ import GatoradeLogo from '../../icons/GatoradeLogo.astro'
 .neon-azul {
   text-shadow: 0px 0px 30px #022ad9; 
   animation: pulso-azul 2s infinite alternate;
+}
+
+.neon-blanco {
+  text-shadow: 0px 0px 30px #ffffff; 
+  animation: pulso-blanco 2s infinite alternate;
 }
 
 .er-fondo{
@@ -404,6 +447,13 @@ import GatoradeLogo from '../../icons/GatoradeLogo.astro'
 
 .er-fondo-azul{
     background-image: url('/images/gifs/bg-neon-azul.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.er-fondo-blanco{
+    background-image: url('/images/gifs/bg-neon-blanco.gif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -439,6 +489,15 @@ import GatoradeLogo from '../../icons/GatoradeLogo.astro'
   }
   to {
     text-shadow: 0px 0px 50px rgba(0, 255, 0, 0.8);
+  }
+}
+
+@keyframes pulso-blanco {
+  from {
+    text-shadow: 0px 0px 20px #e8efedcc;
+  }
+  to {
+    text-shadow: 0px 0px 50px e8efedcc;
   }
 }
 
