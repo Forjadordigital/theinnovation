@@ -66,7 +66,7 @@ export const marcas: Marca[] = [
             ],
             "paises": ["brasil"],
             "fotos": ["energy-orange", "energy-watermelon", ""],
-            "sabores": ["Orange", "Watermelon"]
+            "sabores": ["Orange", "Fierce Grape"]
           }
         ]
   },
