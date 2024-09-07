@@ -45,7 +45,7 @@ export const marcas: Marca[] = [
               "B5 and B6",
               "Caffeine 32 mg/ 100 mL"
             ],
-            "paises": ["brasil", "jamaica"],
+            "paises": ["brasil"],
             "fotos": ["energy-orange", "energy-watermelon", ""],
             "sabores": ["Orange", "Watermelon"]
           },
