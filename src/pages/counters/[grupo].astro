@@ -3,9 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import { marcas } from '../../lib/mangos';
 import Galeria from '../../components/Galeria.astro';
 
-
+// Obtener las rutas basadas en las marcas
 export function getStaticPaths() {
-  // Generar las rutas basadas en las marcas
   return marcas.map((marca) => ({
     params: {
       grupo: marca.slug
@@ -15,19 +14,27 @@ export function getStaticPaths() {
 
 const { grupo } = Astro.params;
 
+// Buscar la marca actual
 const miMarca = marcas.find((m) => m.slug == grupo);
 
 // Verificación para evitar errores si no se encuentra la marca
 if (!miMarca) {
   console.error(`No se encontró la marca: ${grupo}`);
 }
+
+// Obtener el índice de la marca actual
+const indiceActual = marcas.findIndex((m) => m.slug == grupo);
+
+// Obtener la marca anterior y la siguiente (si existen)
+const marcaAnterior = indiceActual > 0 ? marcas[indiceActual - 1] : null;
+const marcaSiguiente = indiceActual < marcas.length - 1 ? marcas[indiceActual + 1] : null;
 ---
 
 <Layout title="Productos de la Marca">
   <main class="sm:w-4/5 m-auto flex flex-col justify-center items-center mt-10 text-white">
 
-     <!-- Imagen de la marca -->
-     {miMarca ? (
+    <!-- Imagen de la marca -->
+    {miMarca ? (
       <img src={`/images/${miMarca.slug}.png`} alt={`Logo de ${miMarca.titulo}`} class="mb-8 w-2/3 mt-10 " transition:name="hero" />
     ) : (
       <p>No se encontró la marca</p>
@@ -85,5 +92,31 @@ if (!miMarca) {
     ) : (
       <p>No hay productos disponibles para esta marca</p>
     )}
+
+    <!-- Navegación entre marcas -->
+    <nav class="flex justify-between w-4/5 mt-8 mb-10">
+      <!-- Botón "Volver" a la marca anterior -->
+      {marcaAnterior ? (
+        <a href={`/counters/${marcaAnterior.slug}`} class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-sky-500 to-yellow-500 via-purple-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#231f20]  rounded-md group-hover:bg-opacity-0 font-pepsi-extended">
+            {/* {marcaAnterior.titulo} */} Anterior
+          </span>
+        </a>
+      ) : (
+        <div></div> <!-- Espacio vacío si no hay marca anterior -->
+      )}
+
+      <!-- Botón "Ir a" la siguiente marca -->
+      {marcaSiguiente ? (
+        <a href={`/counters/${marcaSiguiente.slug}`} class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-yellow-500 to-sky-500 via-purple-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#231f20]  rounded-md group-hover:bg-opacity-0 font-pepsi-extended">
+              {/* {marcaSiguiente.titulo} */} Siguiente
+          </span>
+        </a>
+      ) : (
+        <div></div> <!-- Espacio vacío si no hay marca siguiente -->
+      )}
+    </nav>
+
   </main>
 </Layout>

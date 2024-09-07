@@ -138,17 +138,17 @@ export const marcas: Marca[] = [
       "slug": "mix",
       "productos": [
           {
-            "slug": "7up-hard",
-            "marca": "7UP",
-            "titulo": "7Up Hard",
+            "slug": "mirinda-flavors",
+            "marca": "Mirinda",
+            "titulo": "Mirinda",
             "label": "Flavors",
-            "detalles": "The 7UP Lemon-Lime flavor you love with a kick of alcohol. Perfect for when you want to have a good time, reconnect and unwind after a long day. All naturally flavoured. Cheers to the good vibes, reconnecting and making the most of moments.",
-            "calorias": "100 kcal (12oz)",
-            "sweetnerSystem": "ASK/Sucralose 5% Alcohol",
+            "detalles": "Variety & exciting different new flavors which will not only bring fruity taste & refreshment but also deliver unique taste experience at gathering together & snacking occasions.",
+            "calorias": "0 kcal (12oz)",
+            "sweetnerSystem": "Aspartame & Acesulfame-K",
             "info": [],
             "paises": ["costarica"],
-            "fotos": ["7up-hard", "", ""],
-            "sabores": ["7UP Hard"]
+            "fotos": ["mirinda-blue", "mirinda-pome", ""],
+            "sabores": ["Mirinda Blueberry", "Mirinda Pomegranate grape"]
           },
           {
             "slug": "7up-citrus",
@@ -162,6 +162,19 @@ export const marcas: Marca[] = [
             "paises": ["costarica"],
             "fotos": ["7up-citrus", "", ""],
             "sabores": ["7UP Citrus"]
+          },
+          {
+            "slug": "7up-hard",
+            "marca": "7UP",
+            "titulo": "7Up Hard",
+            "label": "Flavors",
+            "detalles": "The 7UP Lemon-Lime flavor you love with a kick of alcohol. Perfect for when you want to have a good time, reconnect and unwind after a long day. All naturally flavoured. Cheers to the good vibes, reconnecting and making the most of moments.",
+            "calorias": "100 kcal (12oz)",
+            "sweetnerSystem": "ASK/Sucralose 5% Alcohol",
+            "info": [],
+            "paises": ["costarica"],
+            "fotos": ["7up-hard", "", ""],
+            "sabores": ["7UP Hard"]
           },
           {
             "slug": "h2oh-flavors",
@@ -179,19 +192,6 @@ export const marcas: Marca[] = [
             "paises": ["brasil", "colombia"],
             "fotos": ["h2oh", "h2-pitaya", "h2-sandia"],
             "sabores": ["Limonada de Coco", "Pitaya Limón", "Sandia Limón"]
-          },
-          {
-            "slug": "mirinda-flavors",
-            "marca": "Mirinda",
-            "titulo": "Mirinda",
-            "label": "Flavors",
-            "detalles": "Variety & exciting different new flavors which will not only bring fruity taste & refreshment but also deliver unique taste experience at gathering together & snacking occasions.",
-            "calorias": "0 kcal (12oz)",
-            "sweetnerSystem": "Aspartame & Acesulfame-K",
-            "info": [],
-            "paises": ["costarica"],
-            "fotos": ["mirinda-blue", "mirinda-pome", ""],
-            "sabores": ["Mirinda Blueberry", "Mirinda Pomegranate grape"]
           }
         ]
   },
