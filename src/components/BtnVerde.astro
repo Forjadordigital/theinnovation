@@ -1,0 +1,30 @@
+---
+    const {text} = Astro.props
+---
+
+<span class="text-transparent p-4 text-sm bg-clip-text font-black bg-gradient-to-r er-fondo neon-verde">{text}</span>
+    
+<style>
+	
+.neon-verde {
+  text-shadow: 0px 0px 50px rgba(0, 255, 0, 0.8); 
+  animation: pulso 2s infinite alternate;
+}
+
+.er-fondo{
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2FheDA3ZWxwMHVod25vbzBjOXE4cDVrcXd3NGV3cTNxYjFlcGowMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3otO6NFBIAFg2vPZuM/giphy.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes pulso {
+  from {
+    text-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8);
+  }
+  to {
+    text-shadow: 0px 0px 50px rgba(0, 255, 0, 0.8);
+  }
+}
+
+</style>

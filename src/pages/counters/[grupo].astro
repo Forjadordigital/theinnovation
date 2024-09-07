@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { marcas } from '../../lib/mangos';
 import Galeria from '../../components/Galeria.astro';
+import BtnVerde from '../../components/BtnVerde.astro';
 
 // Obtener las rutas basadas en las marcas
 export function getStaticPaths() {
@@ -114,7 +115,13 @@ const marcaSiguiente = indiceActual < marcas.length - 1 ? marcas[indiceActual + 
           </span>
         </a>
       ) : (
-        <div></div> <!-- Espacio vacío si no hay marca siguiente -->
+        
+      <a href="/packaging" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-lime-500 to-green-500 via-emerald-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200">
+          <span class="relative text-green-500 px-5 py-2.5 transition-all ease-in duration-75 bg-[#231f20]  rounded-md group-hover:bg-opacity-0 font-pepsi-extended">
+              <BtnVerde text="Packaging" />
+          </span>
+        </a>
+
       )}
     </nav>
 
