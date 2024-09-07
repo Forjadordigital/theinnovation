@@ -98,7 +98,7 @@ const marcaSiguiente = indiceActual < marcas.length - 1 ? marcas[indiceActual + 
     <nav class="flex justify-between w-4/5 mt-8 mb-10">
       <!-- Botón "Volver" a la marca anterior -->
       {marcaAnterior ? (
-        <a href={`/counters/${marcaAnterior.slug}`} class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-sky-500 to-yellow-500 via-purple-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200">
+        <a href={`/counters/${marcaAnterior.slug}`} class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-white to-white via-white group-hover:from-purple-500 group-hover:to-pink-500 hover:text-[#231f20] focus:ring-4 focus:outline-none focus:ring-purple-200">
           <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#231f20]  rounded-md group-hover:bg-opacity-0 font-pepsi-extended">
             {/* {marcaAnterior.titulo} */} Anterior
           </span>
@@ -109,14 +109,14 @@ const marcaSiguiente = indiceActual < marcas.length - 1 ? marcas[indiceActual + 
 
       <!-- Botón "Ir a" la siguiente marca -->
       {marcaSiguiente ? (
-        <a href={`/counters/${marcaSiguiente.slug}`} class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-yellow-500 to-sky-500 via-purple-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200">
+        <a href={`/counters/${marcaSiguiente.slug}`} class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-white to-white via-white0 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-[#231f20] focus:ring-4 focus:outline-none focus:ring-purple-200">
           <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#231f20]  rounded-md group-hover:bg-opacity-0 font-pepsi-extended">
               {/* {marcaSiguiente.titulo} */} Siguiente
           </span>
         </a>
       ) : (
         
-      <a href="/packaging" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-lime-500 to-green-500 via-emerald-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200">
+      <a href="/packaging" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium  rounded-lg group bg-gradient-to-br from-white to-white via-white group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200">
           <span class="relative text-green-500 px-5 py-2.5 transition-all ease-in duration-75 bg-[#231f20]  rounded-md group-hover:bg-opacity-0 font-pepsi-extended">
               <BtnVerde text="Packaging" />
           </span>
